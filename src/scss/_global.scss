@@ -1,0 +1,90 @@
+// Container
+.container {
+    max-width: ($containerWidth + $containerPadding) + px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 $containerSidePadding + px;
+
+    @media (max-width: $breakpoint1450) {
+        max-width: 1200px;
+    }
+
+    @media (max-width: $breakpoint992) {
+        max-width: 970px;
+    }
+
+    @media (max-width: $breakpoint768) {
+        max-width: 740px;
+    }
+
+    @media (max-width: $breakpoint480) {
+        max-width: none;
+    }
+}
+
+// Body Locked
+body {
+    font-family: $fontMain;
+
+    &.locked {
+        overflow: hidden;
+    }
+}
+
+// Animations
+// Fade
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+// CLASS BTN
+.btn {
+    background: #2F2F2F;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+    color: #FFFFFF;
+    display: inline-block;
+    padding: 11px 35px;
+    border: 1px solid transparent;
+
+    &.btn__hero {
+        background: #F9BF29;
+        color: #2F2F2F;
+        transition: all .3s;
+
+        &:hover {
+            color: #FFFFFF;
+            background: darken(#F9BF29 , 10);
+        }
+    }
+
+    &.btn__outline {
+        color: #FFFFFF;
+        border: 2px solid rgba(255, 255, 255, 0.29);
+        background: transparent;
+        transition: all .3s;
+        padding: 10px 35px;
+        &:hover {
+            background: #FFFFFF;
+            color: #2F2F2F;
+        }
+    }
+
+    &.btn__section {
+        background: #2F2F2F;
+        color: white;
+        &:hover {
+            background: #F9BF29;
+            color: #2F2F2F;
+        }
+    }
+}
