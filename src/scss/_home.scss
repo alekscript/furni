@@ -634,7 +634,6 @@
   }
 }
 
-
 .swiper {
   &__testimonials{
     max-width: 760px;
@@ -654,7 +653,6 @@
     }
   }
 }
-
 .slider {
   &__btn {
     position: absolute;
@@ -678,6 +676,12 @@
           top: unset;
           bottom: 0;
         }
+        @media (max-width: $breakpoint480) {
+          bottom: -10%;
+        }
+        @media (max-width: 320px) {
+          display: none;
+        } 
       }
     }
     &.next {
@@ -688,9 +692,209 @@
         @media (max-width: $breakpoint992) {
           top: unset;
           bottom: 0;
-        } 
+        }
+        @media (max-width: $breakpoint480) {
+          bottom: -10%;
+        }
+        @media (max-width: 320px) {
+          display: none;
+        }  
       }
     } 
   }
 }
 // testimonials section
+
+// Blog Section
+.section {
+  // .section__blog
+  &__blog {
+    padding-bottom: 150px;
+    @media(max-width:$breakpoint480) {
+      padding-top: 40px;
+    }
+  }
+}
+.blog {
+  margin-top: 36px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  @media(max-width: $breakpoint768) {
+    flex-wrap: wrap;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__title {
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 41px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #2F2F2F;
+    @media(max-width: $breakpoint768) {
+      font-size: 26px;
+    }
+  }
+  &__link {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #2F2F2F;
+    border-bottom: 3px solid #000000;
+    transition: all .3s;
+    &:hover {
+      color: #385D50;
+      border-color: #385D50;
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 360px;
+    @media(max-width: $breakpoint768) {
+      flex: 0 1 100%;
+    }
+  }
+  &__img {
+    border-radius: 10px;
+    overflow: hidden;
+    img {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__item-title {
+    margin-top: 44px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #2F2F2F;
+    @media(max-width: $breakpoint992) {
+      margin-top: 20px;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+  }
+  &__info {
+    margin-top: 5px;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #2F2F2F;
+  }
+  &__span {
+    font-style: italic;
+    font-weight: 400;
+  }
+}
+// Blog section
+
+// Subscribe section
+.section {
+  // .section__subscribe
+  &__subscribe {
+    background: #FFFFFF;
+    padding: 100px 0 130px 0;
+    @media(max-width: $breakpoint768) {
+      padding: 150px 0 75px 0;
+    }
+  }
+}
+.subscribe {
+  position: relative;
+  // .subscribe__title
+  &__image {
+    position: absolute;
+    top: -250px;
+    right: 0;
+    @media(max-width: $breakpoint1200) {
+      max-width: 300px;
+    }
+  }
+  &__title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #2F2F2F;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+}
+.form {
+  max-width: 600px;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 24px;
+  @media(max-width:$breakpoint768) {
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
+  // .form__input
+  &__input {
+    padding: 14px 22px;
+    border: 1px solid #C4C4C4;
+    border-radius: 10px;
+    display: flex;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #2F2F2F;
+    outline: none;
+    @media(max-width: $breakpoint768) {
+      padding: 12px 18px;
+    }
+    &:focus {
+      border: 1px solid #385D50;
+    }
+  }
+  // .form__btn
+  &__btn {
+    background: #35736E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 0 50px;
+    border: 1px solid #C4C4C4;
+    border-radius: 10px;
+    outline: none;
+    transition: all .3s;
+    &:hover {
+      background: darken(#35736E,10);
+    }
+    span {
+      display: none;
+    }
+    @media(max-width: $breakpoint768) {
+      padding: 12px 18px;
+      span {
+        display: block;
+        color: #FFFFFF;
+      }
+      svg {
+        display: none;
+      }
+    }
+  }
+  
+}
+// Subscribe section
